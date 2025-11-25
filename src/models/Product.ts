@@ -25,6 +25,7 @@ export class Product {
         console.log(`Description: ${this.description}`);
         console.log(`Category: ${this.category}`);
         console.log(`Price: $${this.price.toFixed(2)}`);
+        console.log(`Discount Percentage: ${this.discountPercentage}%`);
         console.log(`Rating: ${this.rating}/5`);
     }
 
