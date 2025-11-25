@@ -1,4 +1,6 @@
-class Product {
+import { calculateDiscount } from '../utils/discountCalculator.ts';
+
+export class Product {
     id: number;
     name: string;
     description: string;
@@ -27,7 +29,6 @@ class Product {
     }
 
     getPriceWithDiscount(): number {
-        const discountAmount = (this.discountPercentage / 100) * this.price;
-        return this.price - discountAmount;
+        return calculateDiscount(this.discountPercentage, this.price);
     }
 }
